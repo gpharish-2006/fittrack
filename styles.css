@@ -1,0 +1,71 @@
+:root {
+    --primary: #0ea5e9;
+    --primary-dark: #0284c7;
+    --bg: #f1f5f9;
+    --surface: #ffffff;
+    --text: #0f172a;
+    --border: #e2e8f0;
+    --green: #22c55e;
+    --red: #ef4444;
+    --amber: #f59e0b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+body { background: var(--bg); color: var(--text); padding-bottom: 40px; }
+
+header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 25px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+}
+@media (max-width: 850px) { .layout { grid-template-columns: 1fr; } }
+
+.card {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+h2 { font-size: 1.15rem; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.form-group { margin-bottom: 12px; }
+.form-group label { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 4px; }
+.form-group input, .form-group select {
+    width: 100%; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.9rem; outline: none;
+}
+.form-group input:focus, .form-group select:focus { border-color: var(--primary); }
+
+.form-actions { display: flex; gap: 8px; margin-top: 15px; }
+.btn { padding: 8px 16px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; font-size: 0.9rem; }
+.btn-submit { background: var(--primary); color: white; flex-grow: 1; text-align: center; }
+.btn-submit:hover { background: var(--primary-dark); }
+.btn-cancel { background: var(--border); color: var(--text); }
+
+.table-wrapper { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+th { background: #f8fafc; font-weight: 600; }
+
+.label { padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: white; margin-left: 4px; }
+.lbl-success { background: var(--green); }
+.lbl-warn { background: var(--amber); }
+.lbl-danger { background: var(--red); }
+.goal-tag { background: #e0f2fe; color: var(--primary-dark); padding: 2px 6px; border-radius: 4px; font-weight: 500; }
+
+.act-link { text-decoration: none; font-weight: 600; margin-right: 8px; }
+.edit-lnk { color: var(--primary-dark); }
+.del-lnk { color: var(--red); }
+
+.alert { padding: 10px; border-radius: 6px; margin-bottom: 15px; font-size: 0.85rem; }
+.alert-danger { background: #fee2e2; color: var(--red); }
+.alert-success { background: #dcfce7; color: var(--green); }
